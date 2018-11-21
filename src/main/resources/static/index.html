@@ -1,0 +1,72 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Code-Comment-Generator</title>
+  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/zEditor.css">
+  <script type=text/javascript src="search.js"></script>
+  <script type=text/javascript src="jquery-3.3.1-min.js"></script>
+  <script src="/webjars/jquery/jquery.min.js"></script>
+
+  <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+  <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+  <script src="js/require.js"></script>
+  <script src="js/show_own_source.js"></script>
+
+  <style type="text/css" media="screen">
+    .ace_editor {
+      border: 1px solid lightgray;
+      margin: auto;
+      height: 200px;
+      width: 80%;
+    }
+    .scrollmargin {
+      height: 80px;
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload = function() {
+      initialize();
+      connect();
+    }
+  </script>
+
+</head>
+<body>
+<div id="wrapper">
+
+
+  <!--
+  <div id="control-area">
+	  <div class="btn-group" style="margin:0">
+		  <a href="#" class='btn left blue' data-command='insertOrderedList' onclick="changeStyle(this.dataset)">显示行号</a>
+	  </div>
+  </div>
+  -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div id="submit-btn" style="width:100%">
+    <button class='btn left blue' style="margin:auto" onclick="Submit()">搜索</button>
+    <button class='btn left blue' style="margin:auto" onclick="reset()">重置</button>
+  </div>
+  <br/>
+  <br/>
+  <div id="code-area" contenteditable>
+
+  </div>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div id="message-area" contenteditable>
+
+  </div>
+</div>
+</body>
+</html>
